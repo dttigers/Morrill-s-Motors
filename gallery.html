@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Morrill's Motors provides lawn mower and small engine repair in Sandy, Draper, and South Valley. Fast turnaround, honest diagnostics, and pickup available." />
+  <title>Gallery · Morrill's Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img class="logo-mark" src="assets/images/logo.png" alt="Morrill's Motors logo" />
+      <div class="logo-text">
+        <p>Morrill's Motors</p>
+        <span>Lawn &amp; Small Engine Repair</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="info.html">Info</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gallery" class="panel surface gallery">
+      <div class="section-header">
+        <p class="eyebrow">Gallery</p>
+        <h2>Recent service highlights from the bay.</h2>
+        <p>Snapshots of tune-ups, repairs, and rebuilds that brought equipment back to life.</p>
+        <div class="gallery-filters" role="group" aria-label="Filter gallery">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="mowers">Mowers</button>
+          <button class="filter-btn" data-filter="chainsaws">Chainsaws</button>
+          <button class="filter-btn" data-filter="generators">Generators</button>
+          <button class="filter-btn" data-filter="repairs">Repairs</button>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card" data-category="mowers">
+          <img src="assets/images/gallery-mower.svg" alt="Mower tune-up" />
+          <figcaption>
+            <p>Mowers</p>
+            <h3>48-hour mower refresh</h3>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="chainsaws">
+          <img src="assets/images/gallery-trimmer.svg" alt="Trimmer repair" />
+          <figcaption>
+            <p>Chainsaws</p>
+            <h3>Chainsaw pull-start fix</h3>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="mowers">
+          <img src="assets/images/gallery-blade.svg" alt="Blade sharpening" />
+          <figcaption>
+            <p>Mowers</p>
+            <h3>Blade balance + sharpen</h3>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="repairs">
+          <img src="assets/images/gallery-engine.svg" alt="Engine rebuild" />
+          <figcaption>
+            <p>Repairs</p>
+            <h3>Briggs carb rebuild</h3>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="generators">
+          <img src="assets/images/gallery-generator.svg" alt="Generator diagnostics" />
+          <figcaption>
+            <p>Generators</p>
+            <h3>Generator no-start</h3>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="repairs">
+          <img src="assets/images/gallery-fuel.svg" alt="Fuel system service" />
+          <figcaption>
+            <p>Repairs</p>
+            <h3>Fuel system reset</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-close="lightbox"></div>
+    <div class="lightbox-body" role="dialog" aria-modal="true">
+      <button class="close-lightbox" type="button" aria-label="Close" data-close="lightbox">&times;</button>
+      <img src="" alt="" id="lightboxImage" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Morrill's Motors. All rights reserved.</p>
+    <p>Follow along: <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

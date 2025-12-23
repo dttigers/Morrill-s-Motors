@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="inlay" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8dceb" />
+      <stop offset="100%" stop-color="#a14494" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="36" fill="url(#inlay)" />
+  <circle cx="200" cy="200" r="90" fill="rgba(255,255,255,0.7)" />
+  <path d="M260 140 L460 220 L260 300 Z" fill="rgba(255,255,255,0.45)" />
+  <text x="60" y="360" font-size="34" font-family="'Work Sans', sans-serif" fill="#411939" font-weight="600">Resin Inlay Keepsake</text>
+</svg>

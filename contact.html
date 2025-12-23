@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Morrill's Motors provides lawn mower and small engine repair in Sandy, Draper, and South Valley. Fast turnaround, honest diagnostics, and pickup available." />
+  <title>Contact · Morrill's Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img class="logo-mark" src="assets/images/logo.png" alt="Morrill's Motors logo" />
+      <div class="logo-text">
+        <p>Morrill's Motors</p>
+        <span>Lawn &amp; Small Engine Repair</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="info.html">Info</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html" class="nav-cta active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact" class="panel surface contact">
+      <div class="section-header">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell us what needs attention.</h2>
+        <p>Include the equipment brand and any symptoms. We will reply within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Shop hours</h3>
+          <p>Mon – Fri · 8a – 6p<br />Sat · 9a – 2p<br />Sun · Closed</p>
+          <h3>Reach out directly</h3>
+          <p>
+            <a href="tel:18015550188">(801) 555-0188</a><br />
+            <a href="mailto:service@morrillsmotors.com">service@morrillsmotors.com</a>
+          </p>
+          <p>Serving the Sandy, Draper, and South Valley area.</p>
+          <p class="etsy-banner">
+            Need a printable now? <a href="https://www.etsy.com" target="_blank" rel="noreferrer">Grab our instant downloads on Etsy.</a>
+          </p>
+        </div>
+        <form id="contactForm" novalidate>
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Jordan Morrill" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@email.com" />
+          </label>
+          <label>
+            Equipment type
+            <select name="project" required>
+              <option value="">Select equipment</option>
+              <option>Mower</option>
+              <option>Trimmer / Blower</option>
+              <option>Chainsaw</option>
+              <option>Generator</option>
+              <option>Other small engine</option>
+            </select>
+          </label>
+          <label>
+            Symptoms or request
+            <textarea name="message" rows="4" required placeholder="No start, surging, blade vibration, etc."></textarea>
+          </label>
+          <div class="form-footer">
+            <label class="checkbox">
+              <input type="checkbox" name="pickup" />
+              Ask about pickup &amp; delivery
+            </label>
+            <button class="btn primary" type="submit">Send request</button>
+          </div>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Morrill's Motors. All rights reserved.</p>
+    <p>Follow along: <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

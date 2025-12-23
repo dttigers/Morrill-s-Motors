@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Morrill's Motors provides lawn mower and small engine repair in Sandy, Draper, and South Valley. Fast turnaround, honest diagnostics, and pickup available." />
+  <title>Store · Morrill's Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img class="logo-mark" src="assets/images/logo.png" alt="Morrill's Motors logo" />
+      <div class="logo-text">
+        <p>Morrill's Motors</p>
+        <span>Lawn &amp; Small Engine Repair</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="info.html">Info</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="store.html" class="active">Store</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="store" class="panel surface store">
+      <div class="section-header">
+        <p class="eyebrow">Store</p>
+        <h2>Printable checklists and ready-to-go service kits.</h2>
+        <p>Instant downloads are also available on Etsy for quick access.</p>
+      </div>
+      <div class="store-layout">
+        <div class="store-grid">
+          <article class="product-card" data-sku="MM-PR-01" data-price="12" data-name="Spring Start Checklist PDF">
+            <h3>Spring Start Checklist PDF</h3>
+            <p>Step-by-step checklist for mower, trimmer, and blower setup.</p>
+            <p class="price">$12</p>
+            <button class="btn primary add-to-cart">Add to request</button>
+          </article>
+          <article class="product-card" data-sku="MM-PR-02" data-price="9" data-name="Seasonal Maintenance Log">
+            <h3>Seasonal Maintenance Log</h3>
+            <p>Printable log pages for oil, blade, and belt tracking.</p>
+            <p class="price">$9</p>
+            <button class="btn primary add-to-cart">Add to request</button>
+          </article>
+          <article class="product-card" data-sku="MM-PR-03" data-price="18" data-name="Fuel + Carb Guide">
+            <h3>Fuel + Carb Guide</h3>
+            <p>Printable troubleshooting guide for common small engine issues.</p>
+            <p class="price">$18</p>
+            <button class="btn primary add-to-cart">Add to request</button>
+          </article>
+          <article class="product-card" data-sku="MM-PT-01" data-price="45" data-name="Tune-Up Starter Kit">
+            <h3>Tune-Up Starter Kit</h3>
+            <p>Air filter, spark plug, and service notes packaged for pickup.</p>
+            <p class="price">$45</p>
+            <button class="btn primary add-to-cart">Add to request</button>
+          </article>
+        </div>
+        <aside class="quote-panel" aria-live="polite">
+          <h3>Request cart</h3>
+          <ul class="cart-items" id="cartItems">
+            <li class="empty">No items yet. Tap a product to begin.</li>
+          </ul>
+          <p class="cart-total">Estimated total: <span id="cartTotal">$0</span></p>
+          <p class="cart-note">We will confirm pickup or delivery details after your request.</p>
+          <div class="etsy-banner">
+            Prefer Etsy checkout? <a href="https://www.etsy.com" target="_blank" rel="noreferrer">Visit Morrill's Motors on Etsy.</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Morrill's Motors. All rights reserved.</p>
+    <p>Follow along: <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

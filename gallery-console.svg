@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="console" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0efe9" />
+      <stop offset="100%" stop-color="#a7b2c3" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="36" fill="url(#console)" />
+  <g fill="#423633">
+    <rect x="100" y="160" width="400" height="130" rx="18" fill="rgba(255,255,255,0.7)" />
+    <rect x="120" y="180" width="360" height="40" rx="8" fill="#d7b594" />
+    <rect x="120" y="240" width="360" height="30" rx="8" fill="#e6d5c8" />
+    <rect x="140" y="280" width="320" height="12" rx="6" fill="#88674b" />
+  </g>
+  <text x="60" y="360" font-size="34" font-family="'Work Sans', sans-serif" fill="#2b1f1a" font-weight="600">Rolling Coffee Bar Console</text>
+</svg>
