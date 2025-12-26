@@ -25,7 +25,7 @@ body {
   position: relative;
 }
 
-body::before {
+/*body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -35,7 +35,7 @@ body::before {
     radial-gradient(circle at 70% 80%, rgba(88, 103, 110, 0.3), transparent 55%);
   pointer-events: none;
   z-index: -1;
-}
+}*/
 
 img {
   max-width: 100%;
