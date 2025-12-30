@@ -140,15 +140,35 @@ if (contactForm && formStatus) {
       }
       return;
     }
-    formStatus.textContent = "Thanks! We'll get back to you within 1 business day.";
-    formStatus.style.color = '#7fd7b0';
-    setTimeout(() => {
-      contactForm.reset();
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = submitButtonLabel;
-      }
-    }, 700);
+    
+    const formData = new FormData(contactForm);
+    fetch('https://formspree.io/f/mdaorbqj', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          formStatus.textContent = "Thanks! We'll get back to you within 1 business day.";
+          formStatus.style.color = '#7fd7b0';
+          contactForm.reset();
+        } else {
+          formStatus.textContent = 'Error sending message. Please try again.';
+          formStatus.style.color = '#ff9b8a';
+        }
+      })
+      .catch(() => {
+        formStatus.textContent = 'Error sending message. Please try again.';
+        formStatus.style.color = '#ff9b8a';
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = submitButtonLabel;
+        }
+      });
   });
 }
 
