@@ -1061,10 +1061,10 @@ const diagnosisResults = {
         severity: 'diy',
         description: "Using the right nozzle is important for proper pressure.",
         diySteps: [
-            "Red (0°): Very concentrated - use with caution",
-            "Yellow (15°): Heavy cleaning, stripping",
-            "Green (25°): General cleaning, most common",
-            "White (40°): Light cleaning, delicate surfaces",
+            "Red (0Â°): Very concentrated - use with caution",
+            "Yellow (15Â°): Heavy cleaning, stripping",
+            "Green (25Â°): General cleaning, most common",
+            "White (40Â°): Light cleaning, delicate surfaces",
             "Black (soaping): Low pressure for detergent"
         ],
         bringIn: false
@@ -2234,22 +2234,22 @@ function showResult(resultId) {
         case 'diy':
             severityClass = 'severity-diy';
             severityText = 'DIY Fix';
-            severityIcon = '✅';
+            severityIcon = 'âœ…';
             break;
         case 'diy-maybe':
             severityClass = 'severity-diy-maybe';
             severityText = 'Possible DIY Fix';
-            severityIcon = '🔧';
+            severityIcon = 'ðŸ”§';
             break;
         case 'medium':
             severityClass = 'severity-medium';
             severityText = 'Professional Service Recommended';
-            severityIcon = '⚠️';
+            severityIcon = 'âš ï¸';
             break;
         case 'high':
             severityClass = 'severity-high';
             severityText = 'Professional Service Required';
-            severityIcon = '🔴';
+            severityIcon = 'ðŸ”´';
             break;
     }
 
@@ -2287,12 +2287,12 @@ function showResult(resultId) {
     if (result.bringIn) {
         html += `
             <div class="bring-in-section">
-                <h3>🏪 When to Bring It to Morrill's Motors:</h3>
+                <h3>ðŸª When to Bring It to Morrill's Motors:</h3>
                 <p>${result.bringInReason}</p>
                 <div class="contact-cta">
                     <p><strong>Ready to get it fixed right?</strong></p>
                     <p>Bring your equipment to Morrill's Motors for professional diagnosis and repair.</p>
-                    <p class="cta-phone">📞 (435) 263-4252</p>
+                    <p class="cta-phone">ðŸ“ž (435) 263-4252</p>
                     <a href="https://morrillsmotors.com/contact" class="btn-contact" target="_blank">Request Service Online</a>
                 </div>
             </div>
@@ -2300,7 +2300,7 @@ function showResult(resultId) {
     } else {
         html += `
             <div class="success-section">
-                <p>✅ This is usually something you can fix yourself with basic tools.</p>
+                <p>âœ… This is usually something you can fix yourself with basic tools.</p>
                 <p>If you're still having trouble, or if you'd prefer professional service, we're here to help!</p>
             </div>
         `;
