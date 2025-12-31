@@ -1,0 +1,545 @@
+/* Morrill's Motors Diagnosis App Styles */
+
+:root {
+    /* Morrill's Motors Brand Colors */
+    --logo-color: #0f2733;
+    --primary-color: #345361;
+    --primary-dark: #0f2733;
+    --primary-light: #58676e;
+    --accent-color: #58676e;
+    --text-color: #ffffff;
+
+    /* UI Colors */
+    --secondary-color: #5a9bb8;
+    --danger-color: #c94a4a;
+    --warning-color: #d4a84b;
+    --success-color: #4a8c6a;
+    --info-color: #5a9bb8;
+    --light-bg: #f5f7f8;
+    --dark-text: #0f2733;
+    --muted-text: #58676e;
+    --border-color: #d1d8dc;
+    --shadow: 0 2px 8px rgba(15, 39, 51, 0.1);
+    --shadow-lg: 0 4px 16px rgba(15, 39, 51, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #e8edef 0%, #d4dadd 100%);
+    min-height: 100vh;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+#diagnosis-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* Screens */
+.screen {
+    display: none;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Screen */
+#welcome-screen {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+#welcome-screen h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#welcome-screen p {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(15, 39, 51, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 39, 51, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--muted-text);
+    border: 2px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background: var(--light-bg);
+    border-color: var(--muted-text);
+    color: var(--dark-text);
+}
+
+/* Equipment Grid */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.equipment-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: var(--light-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 120px;
+}
+
+.equipment-btn:hover {
+    border-color: var(--primary-color);
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.equipment-btn .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.equipment-btn span:last-child {
+    font-weight: 500;
+    color: var(--dark-text);
+    text-align: center;
+}
+
+/* Screen Headers */
+.screen h2 {
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+}
+
+/* Options List */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: var(--light-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    border-color: var(--primary-color);
+    background: white;
+    padding-left: 1.5rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+/* Results Screen */
+#results-screen {
+    padding: 0;
+}
+
+#results-content {
+    padding: 0;
+}
+
+.result-header {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.result-header h2 {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.result-header.severity-diy {
+    background: linear-gradient(135deg, var(--success-color), #5ba87a);
+}
+
+.result-header.severity-diy-maybe {
+    background: linear-gradient(135deg, var(--info-color), #6db0c9);
+}
+
+.result-header.severity-medium {
+    background: linear-gradient(135deg, var(--warning-color), #c9a04a);
+}
+
+.result-header.severity-high {
+    background: linear-gradient(135deg, var(--danger-color), #b54343);
+}
+
+.severity-icon {
+    font-size: 3rem;
+    display: block;
+}
+
+.severity-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.result-description {
+    padding: 1.5rem 2rem;
+    background: var(--light-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-description p {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+}
+
+.diy-steps {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.diy-steps h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.diy-steps ol {
+    margin-left: 1.5rem;
+}
+
+.diy-steps li {
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+
+.result-note {
+    padding: 1rem 2rem;
+    background: #f5edd8;
+    border-left: 4px solid var(--warning-color);
+    margin: 0;
+}
+
+.result-note strong {
+    color: #7a6530;
+}
+
+.bring-in-section {
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+}
+
+.bring-in-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.bring-in-section > p {
+    margin-bottom: 1.5rem;
+    color: var(--dark-text);
+}
+
+.contact-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-cta p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-cta .cta-phone {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-contact:hover {
+    background: var(--light-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-contact:active {
+    transform: translateY(0);
+}
+
+.success-section {
+    padding: 1.5rem 2rem;
+    background: #ddeee4;
+    border-left: 4px solid var(--success-color);
+}
+
+.success-section p {
+    color: #2d5a42;
+    margin-bottom: 0.5rem;
+}
+
+.success-section p:last-child {
+    margin-bottom: 0;
+}
+
+#results-screen .btn-secondary {
+    margin: 2rem;
+}
+
+/* Footer */
+footer {
+    background: var(--logo-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.contact-info .phone {
+    font-size: 1.2rem;
+    opacity: 1;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .screen {
+        padding: 1.5rem;
+    }
+
+    #welcome-screen {
+        padding: 2rem 1.5rem;
+    }
+
+    #welcome-screen h2 {
+        font-size: 1.5rem;
+    }
+
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .equipment-btn {
+        padding: 1rem 0.75rem;
+        min-height: 100px;
+    }
+
+    .equipment-btn .icon {
+        font-size: 2rem;
+    }
+
+    .result-header {
+        padding: 1.5rem;
+    }
+
+    .severity-icon {
+        font-size: 2.5rem;
+    }
+
+    .result-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .result-description,
+    .diy-steps,
+    .bring-in-section {
+        padding: 1.25rem 1.5rem;
+    }
+
+    #results-screen .btn-secondary {
+        margin: 1.5rem;
+    }
+}
+
+/* Accessibility - Focus States */
+button:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .btn-secondary,
+    .btn-primary {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    #diagnosis-container {
+        box-shadow: none;
+    }
+
+    .result-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
