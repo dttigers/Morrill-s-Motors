@@ -434,6 +434,11 @@ main {
   margin-bottom: 1rem;
 }
 
+.gallery-card img[src*="gallery-blade-sharpening"] {
+  max-width: 155px;
+  height: 90px;
+}
+
 .gallery-card figcaption p {
   color: var(--muted);
   text-transform: uppercase;

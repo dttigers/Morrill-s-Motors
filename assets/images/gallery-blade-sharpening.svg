@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Mower blade -->
+  <rect x="40" y="90" width="120" height="20" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" rx="2"/>
+  
+  <!-- Center hole -->
+  <circle cx="100" cy="100" r="8" fill="none" stroke="white" stroke-width="3"/>
+  
+  <!-- Left blade tip -->
+  <path d="M 40 100 L 25 85 L 25 115 Z" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Right blade tip -->
+  <path d="M 160 100 L 175 85 L 175 115 Z" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Grinding wheel -->
+  <circle cx="140" cy="135" r="25" fill="none" stroke="white" stroke-width="3"/>
+  <circle cx="140" cy="135" r="15" fill="none" stroke="white" stroke-width="2"/>
+  
+  <!-- Sparks -->
+  <circle cx="120" cy="120" r="2" fill="white"/>
+  <circle cx="115" cy="125" r="1.5" fill="white"/>
+  <circle cx="125" cy="118" r="2" fill="white"/>
+  <line x1="118" y1="122" x2="110" y2="115" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="123" y1="120" x2="115" y2="112" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
