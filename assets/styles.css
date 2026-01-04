@@ -19,7 +19,13 @@ body {
   margin: 0;
   font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
-  background: linear-gradient(160deg, #0f2733 0%, #0b1c25 50%, #0f2733 100%);
+  background: 
+    linear-gradient(160deg, rgba(15, 39, 51, 0.95) 0%, rgba(11, 28, 37, 0.95) 50%, rgba(15, 39, 51, 0.95) 100%),
+    url('images/logo.png');
+  background-size: auto, 40%;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
   line-height: 1.6;
   min-height: 100vh;
   position: relative;
