@@ -1,106 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morrill's Motors - Equipment Diagnosis</title>
-    <link rel="stylesheet" href="diagnosis-styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Diagnose your lawn mower or small engine problems with Morrill's Motors interactive diagnostic tool." />
+  <title>Equipment Diagnosis · Morrill's Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="diagnosis-styles.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Morrill's Motors</h1>
-            <p class="tagline">Small Engine & Lawn Equipment Experts</p>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img class="logo-mark" src="assets/images/logo.png" alt="Morrill's Motors logo" />
+      <div class="logo-text">
+        <p>Morrill's Motors</p>
+        <span>Lawn &amp; Small Engine Repair</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="info.html">Info</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="store.html">Store</a>
+      <a href="diagnosis.html" class="active">Diagnosis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="diagnosis-wrapper">
+      <div id="diagnosis-container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+          <h2>Equipment Trouble?</h2>
+          <p>Let's diagnose your lawn equipment or small engine problem and determine the best solution.</p>
+          <button class="btn-primary" onclick="startDiagnosis()">Start Diagnosis</button>
         </div>
-    </header>
 
-    <main>
-        <div id="diagnosis-container">
-            <!-- Welcome Screen -->
-            <div id="welcome-screen" class="screen active">
-                <h2>Equipment Trouble?</h2>
-                <p>Let's diagnose your lawn equipment or small engine problem and determine the best solution.</p>
-                <button class="btn-primary" onclick="startDiagnosis()">Start Diagnosis</button>
-            </div>
-
-            <!-- Equipment Selection -->
-            <div id="equipment-screen" class="screen">
-                <h2>What type of equipment are you having trouble with?</h2>
-                <div class="equipment-grid">
-                    <button class="equipment-btn" onclick="selectEquipment('lawn-mower')">
-                        <span class="icon">🚜</span>
-                        <span>Lawn Mower</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('chainsaw')">
-                        <span class="icon">🪚</span>
-                        <span>Chainsaw</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('trimmer')">
-                        <span class="icon">🌿</span>
-                        <span>String Trimmer</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('blower')">
-                        <span class="icon">🍂</span>
-                        <span>Leaf Blower</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('snowblower')">
-                        <span class="icon">❄️</span>
-                        <span>Snow Blower</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('pressure-washer')">
-                        <span class="icon">💧</span>
-                        <span>Pressure Washer</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('generator')">
-                        <span class="icon">⚡</span>
-                        <span>Generator</span>
-                    </button>
-                    <button class="equipment-btn" onclick="selectEquipment('other')">
-                        <span class="icon">🔧</span>
-                        <span>Other Equipment</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Problem Category Selection -->
-            <div id="problem-screen" class="screen">
-                <h2>What's the main issue?</h2>
-                <div id="problem-options" class="options-list">
-                    <!-- Populated dynamically -->
-                </div>
-                <button class="btn-secondary" onclick="goBack()">← Back</button>
-            </div>
-
-            <!-- Diagnosis Questions -->
-            <div id="question-screen" class="screen">
-                <div class="progress-bar">
-                    <div id="progress-fill" class="progress-fill"></div>
-                </div>
-                <h2 id="question-text"></h2>
-                <div id="answer-options" class="options-list">
-                    <!-- Populated dynamically -->
-                </div>
-                <button class="btn-secondary" onclick="goBack()">← Back</button>
-            </div>
-
-            <!-- Results Screen -->
-            <div id="results-screen" class="screen">
-                <div id="results-content">
-                    <!-- Populated dynamically -->
-                </div>
-                <button class="btn-secondary" onclick="restartDiagnosis()">Start New Diagnosis</button>
-            </div>
+        <!-- Equipment Selection -->
+        <div id="equipment-screen" class="screen">
+          <h2>What type of equipment are you having trouble with?</h2>
+          <div class="equipment-grid">
+            <button class="equipment-btn" onclick="selectEquipment('lawn-mower')">
+              <span class="icon">🚜</span>
+              <span>Lawn Mower</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('chainsaw')">
+              <span class="icon">🪚</span>
+              <span>Chainsaw</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('trimmer')">
+              <span class="icon">🌿</span>
+              <span>String Trimmer</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('blower')">
+              <span class="icon">🍂</span>
+              <span>Leaf Blower</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('snowblower')">
+              <span class="icon">❄️</span>
+              <span>Snow Blower</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('pressure-washer')">
+              <span class="icon">💧</span>
+              <span>Pressure Washer</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('generator')">
+              <span class="icon">⚡</span>
+              <span>Generator</span>
+            </button>
+            <button class="equipment-btn" onclick="selectEquipment('other')">
+              <span class="icon">🔧</span>
+              <span>Other Equipment</span>
+            </button>
+          </div>
         </div>
-    </main>
 
-    <footer>
-        <div class="contact-info">
-            <h3>Morrill's Motors</h3>
-            <p>Your trusted small engine repair experts</p>
-            <p class="phone">📞 Call us for service: (435) 263-4252</p>
+        <!-- Problem Category Selection -->
+        <div id="problem-screen" class="screen">
+          <h2>What's the main issue?</h2>
+          <div id="problem-options" class="options-list">
+            <!-- Populated dynamically -->
+          </div>
+          <button class="btn-secondary" onclick="goBack()">← Back</button>
         </div>
-    </footer>
 
-    <script src="diagnosis.js"></script>
+        <!-- Diagnosis Questions -->
+        <div id="question-screen" class="screen">
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <h2 id="question-text"></h2>
+          <div id="answer-options" class="options-list">
+            <!-- Populated dynamically -->
+          </div>
+          <button class="btn-secondary" onclick="goBack()">← Back</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+          <div id="results-content">
+            <!-- Populated dynamically -->
+          </div>
+          <button class="btn-secondary" onclick="restartDiagnosis()">Start New Diagnosis</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> <a href="index.html" target="_blank">Morrill's Motors</a>. All rights reserved.</p>
+    <p>Follow along: <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
+  </footer>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="diagnosis.js"></script>
 </body>
 </html>
