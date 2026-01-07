@@ -121,6 +121,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script src="diagnosis.js"></script>
+  <script>
   if (window.location.hostname.includes('staging') ||
     window.location.hostname.includes('localhost') ||
     window.location.hostname.includes('dev')) {
@@ -128,5 +129,6 @@
   script.src = 'assets/staging-markup.js';
   document.body.appendChild(script);
 }
+</script>
 </body>
 </html>
